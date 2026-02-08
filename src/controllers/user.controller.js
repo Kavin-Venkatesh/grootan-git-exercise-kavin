@@ -38,3 +38,24 @@ export const updateUser = async(req, res) => {
         body : users[userIndex]
     });
 };
+
+//controller function to delete a user by id
+export const deleteUser = async(req, res) => {
+    const userId = req.params.id;
+    const userIndex = users.findIndex(user => user.id === parseInt(userId));
+    if( userIndex === -1 ) {
+        res.status(404).json({
+            message: 'User not found , Please check the user id and try again'
+        });
+        return;
+    }
+    users.splice(userIndex, 1);
+    res.status(200).json({
+        message: 'User deleted successfully'
+    });
+};  
+
+//controller function to get all users
+export const getAllUsers = async(req, res) => {
+    res.status(200).json(users);
+};
