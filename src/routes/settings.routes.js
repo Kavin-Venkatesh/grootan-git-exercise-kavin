@@ -1,6 +1,8 @@
 import express from 'express';
 import { 
-    getSettings
+    getSettings,
+    updateSettings,
+    deleteSettings
  } from '../controllers/settings.controller.js';
 
 const router = express.Router();
