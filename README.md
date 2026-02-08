@@ -21,6 +21,10 @@ This project serves as a hands-on exercise for understanding Git fundamentals, i
 - **`/api/users/delete-user/:id`** - Delete user by ID
 - **`/api/users/all-users`** - Fetch all users
 - **`/api/users/create-user/`** - Create a user with user details
+- **`/api/settings/user-settings/:id`** - Fetch a user settings by ID
+- **`/api/settings/update-settings/:id`** -  Update user's settings by ID
+- **`/api/settings/delete-settings/:id`** - Delete a user with ID
+- 
 
 ## Getting Started
 
