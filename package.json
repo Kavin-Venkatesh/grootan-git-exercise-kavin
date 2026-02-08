@@ -1,0 +1,31 @@
+{
+  "name": "grootan-git-exercise-kavin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kavin-Venkatesh/grootan-git-exercise-kavin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Kavin-Venkatesh/grootan-git-exercise-kavin/issues"
+  },
+  "homepage": "https://github.com/Kavin-Venkatesh/grootan-git-exercise-kavin#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "http": "^0.0.1-security"
+  }
+}
