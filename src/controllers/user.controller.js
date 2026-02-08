@@ -18,3 +18,23 @@ export const getUser = async(req, res) => {
 
     res.status(200).json(user);
 };
+
+//controller function to update a user by id
+export const updateUser = async(req, res) => {
+    const userId = req.params.id;
+    const userIndex = users.findIndex(user => user.id === parseInt(userId));
+
+    if( userIndex === -1 ) {
+        res.status(404).json({
+            message: 'User not found , Please check the user id and try again'
+        });
+        return;
+    }
+
+    const { name, email } = req.body;
+    users[userIndex] = { id: parseInt(userId), name, email };
+    res.status(200).json({
+        message: 'User updated successfully',
+        body : users[userIndex]
+    });
+};
