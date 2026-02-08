@@ -8,5 +8,7 @@ import {
 const router = express.Router();
 
 router.get('/user-settings/:id', getSettings);
+router.put('/update-settings/:id', updateSettings);
+router.delete('/delete-settings/:id', deleteSettings);
 
 export default router;
