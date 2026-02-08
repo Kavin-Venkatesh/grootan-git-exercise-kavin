@@ -59,3 +59,19 @@ export const deleteUser = async(req, res) => {
 export const getAllUsers = async(req, res) => {
     res.status(200).json(users);
 };
+
+//controller function to create a new user
+export const createUser = async(req, res) => {
+    const { name, email } = req.body;
+    const newUser = {
+        id: users.length + 1,
+        name,
+        email
+    };
+    users.push(newUser);
+    res.status(201).json({
+        message: 'User created successfully',
+        body: newUser
+    });
+};
+
